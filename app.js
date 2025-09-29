@@ -56,6 +56,13 @@ async function copyToClipboard(text) {
 }
 
 
+/** Translates a key based on the current state language */
+function T(key, ...args) {
+    let text = UI_TEXTS[STATE.language][key];
+    if (typeof text === 'function') {
+        return text(...args);
+    }
+    return text || `[MISSING TEXT: ${key}]`;
 }
 
 /** TTS (Text-to-Speech) Functionality */
@@ -83,7 +90,6 @@ function handleTtsClick(text) {
 function updateUiText() {
     document.querySelector('h1').textContent = T('TITLE');
     document.querySelector('.subtitle').textContent = T('SUBTITLE');
-    document.getElementById('ai-disclaimer').textContent = T('AI_DISCLAIMER');
     
     // Update navigation controls (only if they are visible and contain <span>)
     if (D.backButton.querySelector('span')) {
@@ -601,7 +607,7 @@ function updatePDFContainer(contentHTML, headingOverride) {
         <div style="padding: 20px; font-family: 'Inter', sans-serif; font-size: 10pt; line-height: 1.4;">
             <h1 style="color: #0f6fff; font-size: 18pt; margin-bottom: 5px;">${T('TITLE')}</h1>
             <h2 style="font-weight: normal; font-size: 12pt; margin-top: 0; color: #555;">${T('SUBTITLE')}</h2>
-            <div style="margin-top: 10px; padding: 10px; border: 1px solid #ccc; font-size: 8pt; background-color: #f9f9f9; color: #555;">${T('AI_DISCLAIMER')}</div>
+            
             <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;">
             <h3 style="font-size: 16pt; margin-bottom: 15px;">${headingOverride}</h3>
             
