@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>knie belasting compas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "data": "./data.js",
+                "app": "./app.js"
+            }
+        }
+    </script>
+    <!-- HTML2PDF CDN for client-side PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div id="app-container">
+        <header>
+            <div class="header-content">
+                <div class="title-block">
+                    <h1>knie belasting compas</h1>
+                    <p class="subtitle">ADVISEREND hulpmiddel bij patello femoraal pijnsyndroom</p>
+                </div>
+                <div class="settings">
+                    <button id="tts-toggle" aria-label="Text-to-Speech inschakelen" title="Text-to-Speech inschakelen" class="icon-button">
+                        <i data-lucide="volume-2" class="lucide-icon"></i>
+                    </button>
+                    <button id="language-toggle" data-lang="en" aria-label="Taal wisselen" title="Change Language (English)">EN</button>
+                    <button id="contrast-toggle" aria-label="Hoog contrast" title="High Contrast Mode">
+                        <i data-lucide="contrast" class="lucide-icon"></i>
+                    </button>
+                    <button id="info-button" aria-label="Informatie" title="Informatie">
+                        <i data-lucide="help-circle" class="lucide-icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="ai-disclaimer" class="warning-small">Door AI gegenereerde inhoud is mogelijk onjuist.</div>
+        </header>
+
+        <main class="quiz-layout">
+            <div id="quiz-area" role="region" aria-live="polite">
+                <!-- Progress Bar and Step Counter -->
+                <div id="progress-container">
+                    <div id="progress-bar-shell">
+                        <div id="progress-bar" style="width: 0%;"></div>
+                    </div>
+                    <p id="step-counter">Stap 1/4</p>
+                </div>
+                
+                <!-- Screen Content Renders Here -->
+                <div id="screen-content" class="screen-transition-area">
+                    <!-- Dynamic content -->
+                </div>
+
+                <!-- Navigation Buttons (Used for standard flow) -->
+                <div id="navigation-controls" class="navigation-controls">
+                    <button id="back-button" class="secondary" disabled>
+                        <i data-lucide="arrow-left" class="lucide-icon"></i>
+                        <span>Terug</span>
+                    </button>
+                    <button id="next-button" class="primary">
+                        <span>Volgende</span>
+                        <i data-lucide="arrow-right" class="lucide-icon"></i>
+                    </button>
+                </div>
+
+                <!-- Urgent Advice Buttons removed, now dynamically generated in screen content -->
+
+            </div>
+            
+            <aside id="result-summary-placeholder">
+                <!-- Quick result summary/context/fixed disclaimer for wider screens -->
+                <p class="aside-disclaimer">
+                    De informatie in deze app is niet bedoeld als medisch advies en vervangt geen consult bij een arts of fysiotherapeut.
+                </p>
+            </aside>
+        </main>
+        
+        <footer id="footer">
+            <div id="global-disclaimer-footer" class="footer-disclaimer">
+                <!-- Full disclaimer text will be injected here -->
+            </div>
+            <div id="design-credit" class="design-credit-line">
+                <!-- Design credit injected here -->
+            </div>
+        </footer>
+
+        <!-- Hidden modal for info/help -->
+        <div id="info-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="info-modal-title" style="display: none;">
+            <div class="modal-content">
+                <h2 id="info-modal-title">Informatie</h2>
+                <p>Deze tool is ontworpen om u te helpen een advies te geven over de belasting van uw knie bij PFPS. Het is een hulpmiddel, GEEN medisch advies.</p>
+                <p id="modal-disclaimer"></p>
+                <button class="primary close-modal">Sluit</button>
+            </div>
+        </div>
+
+        <!-- Hidden container for PDF generation content -->
+        <div id="pdf-content-container" style="display: none;"></div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+    <script>
+        // Initialize Lucide icons after DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
