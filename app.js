@@ -56,13 +56,6 @@ async function copyToClipboard(text) {
 }
 
 
-/** Translates a key based on the current state language */
-function T(key, ...args) {
-    let text = UI_TEXTS[STATE.language][key];
-    if (typeof text === 'function') {
-        return text(...args);
-    }
-    return text || `[MISSING TEXT: ${key}]`;
 }
 
 /** TTS (Text-to-Speech) Functionality */
