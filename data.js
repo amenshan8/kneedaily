@@ -35,7 +35,7 @@ const ADVICE = {
 // --- General UI Text & Translations ---
 const UI_TEXTS = {
     nl: {
-        TITLE: "Knie belasting compas",
+        TITLE: "knie belasting compas",
         SUBTITLE: "ADVISEREND hulpmiddel bij patello femoraal pijnsyndroom",
         GENERAL_DISCLAIMER: "De informatie in deze app is niet bedoeld als medisch advies en vervangt geen consult bij een arts of fysiotherapeut. Gebruik van deze app is op eigen risico. Bij twijfel, verandering of verergering van klachten wordt geadviseerd direct contact op te nemen met een huisarts of fysiotherapeut. De ontwikkelaars aanvaarden geen aansprakelijkheid voor enige schade voortvloeiend uit het gebruik van deze app.",
         YES: "JA",
