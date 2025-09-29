@@ -37,7 +37,7 @@ const UI_TEXTS = {
     nl: {
         TITLE: "knie belasting compas",
         SUBTITLE: "ADVISEREND hulpmiddel bij patello femoraal pijnsyndroom",
-        AI_DISCLAIMER: "Door AI gegenereerde inhoud is mogelijk onjuist.",
+        AI_DISCLAIMER: "",
         GENERAL_DISCLAIMER: "De informatie in deze app is niet bedoeld als medisch advies en vervangt geen consult bij een arts of fysiotherapeut. Gebruik van deze app is op eigen risico. Bij twijfel, verandering of verergering van klachten wordt geadviseerd direct contact op te nemen met een huisarts of fysiotherapeut. De ontwikkelaars aanvaarden geen aansprakelijkheid voor enige schade voortvloeiend uit het gebruik van deze app.",
         YES: "JA",
         NO: "NEE",
@@ -82,7 +82,7 @@ const UI_TEXTS = {
     en: {
         TITLE: "Knee Load Compass",
         SUBTITLE: "ADVISORY tool for Patellofemoral Pain Syndrome",
-        AI_DISCLAIMER: "AI generated content may be inaccurate.",
+        AI_DISCLAIMER: "",
         GENERAL_DISCLAIMER: "The information in this app is not intended as medical advice and does not replace consultation with a doctor or physiotherapist. Use of this app is at your own risk. If in doubt, or if symptoms change or worsen, it is advised to contact a general practitioner or physiotherapist immediately. The developers accept no liability for any damage resulting from the use of this app.",
         YES: "YES",
         NO: "NO",
