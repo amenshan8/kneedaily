@@ -130,7 +130,7 @@ const SCREENS = [
     {
       "id": "landing",
       "type": "info",
-      "title": "knie belasting compas",
+      "title": "Knie belasting compas",
       "body_nl": "Welkom — deze tool helpt u advies te geven bij PFPS. De informatie is geen medisch advies.",
       "body_en": "Welcome — this tool helps provide advice regarding PFPS. The information provided is not medical advice."
     },
