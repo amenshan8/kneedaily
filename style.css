@@ -102,14 +102,6 @@ header {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-#ai-disclaimer {
-    color: #fff;
-    opacity: 0.8;
-    font-size: 0.8rem;
-    text-align: center;
-    padding-bottom: 0.5rem;
-}
-
 /* Main Layout (Mobile First) */
 main.quiz-layout {
     display: flex;
@@ -593,9 +585,6 @@ body.high-contrast .settings button:hover {
     border: 2px solid white;
 }
 
-body.high-contrast #ai-disclaimer {
-    color: var(--color-primary);
-}
 body.high-contrast .question-card {
     background: #333;
     color: white;
