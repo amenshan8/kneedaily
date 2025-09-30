@@ -56,6 +56,10 @@ header {
     font-size: 1.75rem; /* Slightly larger title */
 }
 
+.title-block h1::first-letter {
+    text-transform: uppercase;
+}
+
 .title-block .subtitle {
     margin: 0;
     font-size: 1rem;
